@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="section section-professores center">
+    <div class="container">
+      <div class="row ">
+        <div class="info-header">
+          <h4 class="center"><span class="red-text text-darken-4">PROFESSORES</span></h4>
+        </div>
+        {% for professor in professores %}
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <img src="{{ professor.photo.url }}" class="circle responsive-img" alt="">
+            <h5 class="grey-text text-darken-4">{{professor.name}}<br/></h5>
+            <h6>{{professor.email}}</h6>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+  </section>
+  <section class="section section-mestrandos center grey lighten-3">
+    <div class="container">
+      <div class="row ">
+        <div class="info-header">
+          <h4 class="center"><span class="red-text text-darken-4">ALUNOS</span> DE MESTRADO</h4>
+        </div>
+        {% if mestrando %}
+          {% for aluno in mestrandos %}
+          <div class="col s12 m4 l3">
+            <div class="card-panel">
+              <img src="{{  aluno.photo.url }}" class="circle responsive-img" alt="">
+              <h5 class="grey-text text-darken-4">{{ aluno.name }}<br/></h5>
+              <h6>{{ aluno.email }}</h6>
+            </div>
+          </div>
+          {% endfor %}  
+        {% else %}
+        <div class="col s12">
+          Sem alunos de mestrado no momento :(
+        </div>
+        {% endif %}
+      </div>
+  </section>
+  <section class="section section-ic center">
+    <div class="container">
+      <div class="row ">
+        <div class="info-header">
+          <h4 class="center"><span class="red-text text-darken-4">ALUNOS</span> DE GRADUAÇÃO</h4>
+        </div>
+        {% if graduandos %}
+          {% for aluno in graduandos %}
+          <div class="col s12 m4 l3">
+            <div class="card-panel">
+              <img src="{{ aluno.photo.url }}" class="circle responsive-img" alt="">
+              <h5 class="grey-text text-darken-4">{{ aluno.nome }}<br/></h5>
+              <h6>{{ aluno.email }}</h6>
+            </div>
+          </div>
+          {% endfor %}
+          {% else %}
+          <div class="col s12">
+            Sem alunos de graduação no momento :(
+          </div>
+          {% endif %}
+        
+      </div>
+    </div>
+  </section>
+    
+{% endblock  %}
+  
+    

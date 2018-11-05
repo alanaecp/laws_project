@@ -1,0 +1,22 @@
+<nav class="main-nav red darken-4">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="{% url 'index' %}" class="brand-logo">LAWS</a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse">
+              <i class="fa fa-bars"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="{% url 'members' %}">Integrantes</a></li>
+              <li><a href="{% url 'projects' %}">Projetos</a></li>
+              <li><a href="{% url 'publications' %}">Publicações</a></li>
+              <li><a href="#" class="btn white red-text" href="{% url 'index' %}">Login</a></li>
+              <li>
+                <a href="https://www.facebook.com/LAWS-Laboratory-of-Advanced-Web-Systems-126502950782291/" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+    </nav>

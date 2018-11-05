@@ -1,0 +1,23 @@
+
+  <!-- SECTIONS: Icon box -->
+  <section class="section section-icons center">
+        <div class="container">
+          <div class="row">
+            <div class="info-header">
+              <h4 class="center"><span class="red-text text-darken-4">ÁREAS</span> DE ATUAÇÃO</h4>
+            </div>
+            {% for area in areas %}
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="{{area.icon}} fa-3x red-text text-darken-2"></i>
+                <h5 class="grey-text text-darken-4">{{area.title}}</h5>
+              </div>
+            </div>
+            {% endfor %}
+             
+            </div>
+
+          </div>
+        </div>
+      </section>
+    

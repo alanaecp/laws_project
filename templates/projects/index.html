@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+ 
+  <section class="section section-projetos center">
+      
+    <div class="container">
+       
+      <div class="row ">
+        <div class="info-header">
+          <h4 class="center"><span class="red-text text-darken-4">PROJETOS</span></h4>
+        </div>
+        {% for projeto in projetos %}
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{ projeto.image.url }}" class="responsive-img" alt="">
+              <span class="card-title">{{projeto.title}}</span>
+            </div>
+            <div class="card-content">
+                {{projeto.description}}
+            </div>
+            <div class="card-action">
+                <a target="_blank" href="{{ projeto.link }}">Acessar ferramenta</a>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+  </section>
+ 
+    
+{% endblock  %}
+  
+    
